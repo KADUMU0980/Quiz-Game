@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Background from './Background';
 
-const API_URL = 'http://localhost:5000/api/auth/register';
+const API_URL = 'https://quiz-game-z2sm.onrender.com/api/auth/register';
 
 function Register() {
   const [formData, setFormData] = useState({

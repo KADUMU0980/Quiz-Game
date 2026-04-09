@@ -19,7 +19,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/quiz/questions");
+        const res = await fetch("https://quiz-game-z2sm.onrender.com/api/quiz/questions");
         const data = await res.json();
         if (res.ok && Array.isArray(data)) {
           setQuestions(data);
@@ -77,7 +77,7 @@ const Quiz = () => {
     });
 
     try {
-      await fetch("http://localhost:5000/api/results/save", {
+      await fetch("https://quiz-game-z2sm.onrender.com/api/results/save", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ roomCode, username, userId: username, score }),

@@ -19,7 +19,7 @@ const Results = () => {
 
   useEffect(() => {
     const fetchResults = () => {
-      fetch(`http://localhost:5000/api/results/${roomCode}`)
+      fetch(`https://quiz-game-z2sm.onrender.com/api/results/${roomCode}`)
         .then((res) => res.json())
         .then((data) => {
           const sorted = data.sort((a, b) => b.score - a.score);

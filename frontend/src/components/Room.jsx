@@ -26,7 +26,7 @@ const Room = () => {
     try {
       const token = localStorage.getItem('token');
       const userId = localStorage.getItem('userId');
-      const response = await fetch(`http://localhost:5000/api/rooms/${roomCode}`, {
+      const response = await fetch(`https://quiz-game-z2sm.onrender.com/api/rooms/${roomCode}`, {
         headers: { 'Authorization': `Bearer ${token}` },
       });
       const data = await response.json();
@@ -47,7 +47,7 @@ const Room = () => {
   const handleStartQuiz = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await fetch(`http://localhost:5000/api/quiz/start`, {
+      const response = await fetch(`https://quiz-game-z2sm.onrender.com/api/quiz/start`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

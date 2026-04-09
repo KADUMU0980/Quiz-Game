@@ -16,7 +16,7 @@ const Lobby = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/rooms/create", {
+      const res = await fetch("https://quiz-game-z2sm.onrender.com/api/rooms/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ roomName, hostName: username }),
@@ -40,7 +40,7 @@ const Lobby = () => {
     if (!roomCode || !username) return alert("Please enter Room Code and Username");
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/rooms/join", {
+      const res = await fetch("https://quiz-game-z2sm.onrender.com/api/rooms/join", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ roomCode, username }),
