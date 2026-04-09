@@ -1,7 +1,7 @@
 # ===== Dependencies =====
 node_modules/
 
-# ===== Environment Variables (NEVER push these!) =====
+# ===== Environment Variables (NEVER push — contains DB credentials & JWT secret!) =====
 .env
 .env.local
 .env.development
@@ -24,13 +24,10 @@ Thumbs.db
 !.vscode/extensions.json
 .idea/
 *.suo
-*.ntvs*
-*.njsproj
-*.sln
 *.sw?
+
+# ===== Temp / diagnostic scripts =====
+diagnose.js
 
 # ===== Deployment =====
 .vercel
-
-# ===== Diagnostic / Temp scripts =====
-backend/diagnose.js
