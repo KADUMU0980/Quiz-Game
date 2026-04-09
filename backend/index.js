@@ -12,10 +12,7 @@ const resultsRoutes = require('./routes/resultsRoutes');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true
-}));
+app.use(cors()); // Allow all origins for production testing
 app.use(express.json());
 
 // MongoDB Connection
